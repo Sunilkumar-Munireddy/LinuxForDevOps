@@ -9,21 +9,46 @@ LINUX PRACTISING
  3. ls -a or ll -a           # list the hidden files 
  4. touch file1 file2        # create a multiple file
  5. mkdir Dir1 
+-----------------
+Syntax:
 
+chown [OPTION]… [OWNER][:[GROUP]] FILE…
 
+sudo chown sunil:jungle file1  # changing the file owner from default user to sunil user and group
+sudo chown sunil file1    # change file1 user to sunil user 
+---------------------
 
-syntax:
+syntax: CAT
 $ cat <flag> {filename}
 
 cat -b filename    # This adds line numbers to non-blank lines
 cat -n filename    # This adds line numbers to all lines
 cat -s filename    # This squeezes blank lines into one line
 cat -E file1       # This shows $ at the end of line 
+---------------------
 
+syntax: GREP
+$ grep <flag or element_to_search> {filename}
 
+grep -i filename    # Returns the results for case insensitive strings
+grep -n filename    # Returns the matching strings along with their line number
+grep -v filename    # Returns the result of lines not matching the search string
+grep -c filename    # Returns the number of lines(count) in which the results matched the search string
+---------------------
 
+syntax: SORT 
+$ sort <flag> {filename}
 
+sort -r    # the flag returns the results in reverse order;
+sort -f    # the flag does case insensitive sorting
+sort -n    # the flag returns the results as per numerical order
+---------------
 
+syntax: tail
+$ sort <flag> {filename}
+
+tail -n 3 filename   # here 3 means last 3 lines will display/ you can change according to your need
+---------------
 
 Creating user and groups
  
@@ -48,5 +73,88 @@ Creating user and groups
 14 cat /etc/group     # to check all the group details
 15. usermod -G sunil chetan   # to add chetan user into sunil user group 
 
+-----------------
+Syntax:
+$lsof [option][user name]
+
+lsof             # lists all files opened by all running process 
+lsof -u <username>   # displays the list of open files by given user
+------------------
+
+Syntax :
+$ ifconfig (interface configuration) is used to configure the kernel-resident network interfaces. 
+It is used at the boot time to set up the interfaces as necessary
+
+#
+ifconfig
+ifconfig -a 
+ifconfig -s
+--------------------
+SED utility  - Used to perform file operations on command line.
+
+sed 's/<string1>/<string2>/' file1   # it replaces string1 with string2 in file1
+-------------------
+
+DIFF - diff between two files
+
+dif file1 file2
+-------------------
+
+HISTORY   # to get the history of commands 
+-------------------
+
+Find # used to find the file or Dir name 
+------------------
+
+FREE   # shows the memory used, swap memory used in system(i.e ram memory) 
+
+to see this info in file
+cat /proc/meminfo
+-------------------
+
+df  (DISK FREE) # to check the disk details in a server
+
+df -h   # in human-readble format
+-------------------
+
+ssh-keygen  # Use the ssh-keygen command to generate a public/private authentication key pair
+
+ssh-keygen -t rsa  #creates the public and private parts of an RSA key
+-------------------
+
+ip #This command is used to show or manipulate routing, devices, and tunnels
+
+ip address
+ip link
+-------------------
+
+nslookup #used to get the ip of a given DNS
+
+eg : nslookup www.google.command
+--------------------
+
+CURL    -curl is a command-line tool to transfer data to or from a server,
+         using any of the supported protocols (HTTP, FTP, IMAP, POP3, SCP, SFTP, SMTP, TFTP, TELNET, LDAP or FILE)
+--------------------
+		 
+linux package management   - helps in handling packages in Linux
+
+linux/redhat:
+yum
+eg : sudo yum update
+
+debioan :
+apt-get 	#Advanced Packaging Tool 	 
+eg : sudo apt-get update 
+-------------------------
+
+CPU compute monitoring commands:
+
+1. top or htop    # list the all process info and cpu consuption by each process
+2. ps aux         # process info 
+3. kill <<PID>>   # kill unwanted process using pid 
+4. vmstat -s      # all ram memory statistics 
+5. netstat        # network connections details
+6. iopstat        # read and write info of a server. 
 
 
