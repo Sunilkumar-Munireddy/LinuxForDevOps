@@ -156,5 +156,10 @@ CPU compute monitoring commands:
 4. vmstat -s      # all ram memory statistics 
 5. netstat        # network connections details
 6. iopstat        # read and write info of a server. 
+7.traceroute      
+8.hostname
 
-
+System status checking :
+systemctl status service
+systemctl start service
+systemctl stop service
