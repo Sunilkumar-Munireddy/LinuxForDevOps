@@ -1,0 +1,52 @@
+Dec 12 2023
+LINUX PRACTISING
+----------------
+
+ File management commands
+ 
+ 1. ls
+ 2. ls -ltr or ll or ls -ll  # list the hidden files 
+ 3. ls -a or ll -a           # list the hidden files 
+ 4. touch file1 file2        # create a multiple file
+ 5. mkdir Dir1 
+
+
+
+syntax:
+$ cat <flag> {filename}
+
+cat -b filename    # This adds line numbers to non-blank lines
+cat -n filename    # This adds line numbers to all lines
+cat -s filename    # This squeezes blank lines into one line
+cat -E file1       # This shows $ at the end of line 
+
+
+
+
+
+
+Creating user and groups
+ 
+1. Super user / root user   - Administrator
+2. System User              - Application or software creates 
+3. Normal User              - User creats by Root user 
+
+
+1. whoami             # to check which user 
+2. cd                 # to go to user home Dir
+3. id root            # to check more info
+4. cat /etc/passwd    # to check all the user deatils 
+5. sudo su -          # switch to root user 
+6. useradd sunil      # to create user sunil by root user
+7. useradd chetan     # to create user chetan by root user
+8. passwd chetan      # it is ask for new passowrd  to give\
+9. userdel chetan     # to delete the user  
+10. groupadd jungle   # to create a group called jungle
+11. usermod -g jungle sunil # to move the sunil user into jungle group
+12. groupdel jungle  # to delete the group jungle
+13. cat /etc/passwd    # to check all the user details
+14 cat /etc/group     # to check all the group details
+15. usermod -G sunil chetan   # to add chetan user into sunil user group 
+
+
+
