@@ -4,3 +4,5 @@
      expected : today is <output from date>>
      actual : today is 
 Reason: DATE is a system utility command and it send its output to stdin so that pipe could not able to recieve this output.
+3. Usage of AWK command utility 
+    eg : ps -ef | grep "ubuntu" | awk -F " " '{print $2}'  # to print the pid of ubuntu proccess.
