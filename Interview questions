@@ -6,3 +6,9 @@
 Reason: DATE is a system utility command and it send its output to stdin so that pipe could not able to recieve this output.
 3. Usage of AWK command utility 
     eg : ps -ef | grep "ubuntu" | awk -F " " '{print $2}'  # to print the pid of ubuntu proccess.
+4. Adding the set commands inside a script 
+     1. set -x   # run in debug mode
+     2. set -e   # exists the script  when there is an error # it will not work for pipe "|"
+     3. set -0 pipefail   # to exis the script if pipe fails.
+5. softlink vs hardlink
+6. 
