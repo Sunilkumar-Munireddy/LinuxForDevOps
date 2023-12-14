@@ -1,0 +1,6 @@
+1. what is the use of shebang
+2.why pipe is not working in below command
+     date | echo " today is "
+     expected : today is <output from date>>
+     actual : today is 
+Reason: DATE is a system utility command and it send its output to stdin so that pipe could not able to recieve this output.
